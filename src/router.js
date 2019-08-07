@@ -12,12 +12,12 @@ export default new IonicVueRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/not-found',
       name: 'not-found',
-      component: NotFound
+      component: NotFound,
     }
   ]
 });

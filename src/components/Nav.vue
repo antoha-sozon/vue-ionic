@@ -7,11 +7,21 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
-          <ion-item>Menu Item</ion-item>
+          <ion-item >
+            <router-link tag="button" to="/" exact>
+              <span @click="closeModal">Home</span>
+            </router-link>
+          </ion-item>
+          <ion-item>
+            <router-link tag="button" to="/matches" exact>
+              <span @click="closeModal">Matches</span>
+            </router-link>
+          </ion-item>
+          <ion-item>
+            <router-link tag="button" to="/rating" exact>
+              <span @click="closeModal">Rating</span>
+            </router-link>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -23,7 +33,13 @@
 </style>
 
 <script lang="ts">
-    export default {
-        name: 'Nav',
+  export default {
+    name: 'Nav',
+    methods: {
+      closeModal: function () {
+          document.querySelector('ion-menu').close();
+
+      }
     }
+  }
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <div class="ion-page" main>
+  <div class="ion-page">
     <ion-content class="ion-padding ion-text-center">
-      <h1>Welcome To @ionic/vue</h1>
+      <h1>Rating</h1>
       <img alt="Vue logo" src="../assets/img/vue-logo.png">
       <img alt="Vue logo" src="../assets/img/vue-logo.png">
       <img alt="Vue logo" src="../assets/img/vue-logo.png">
@@ -13,6 +13,6 @@
 
 <script>
   export default {
-    name: "home",
+    name: "rating",
   };
 </script>
