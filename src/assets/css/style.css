@@ -1,0 +1,99 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.badge {
+  padding: 5px 8px;
+  font-size: 11px;
+  line-height: 10px;
+  right: 6px;
+  left: auto;
+  top: 5px;
+  background-color: #841414;
+}
+
+.match {
+  height: 100%;
+  padding: 50px 15px;
+  background: linear-gradient(to top, rgba(0,0,0,1) 30%,rgba(255,255,255,0) 100%), url('../img/matches_bg.jpg');
+  background-position: center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: #04b1ff;
+  background-blend-mode: multiply;
+}
+
+.match_head img {
+  height: 150px;
+}
+
+.match_teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 25px 50px;
+}
+
+.match_teams img {
+  width: 80px;
+}
+
+.match_teams span {
+  font-size: 15px;
+  font-family: cursive;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+}
+
+.match_info {
+  padding-bottom: 4px;
+  clear: both;
+  font-size: 14px;
+  color: #fff;
+  line-height: normal;
+  font-family: Montserrat,sans-serif;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tabs {
+  background-color: #212121;
+}
+
+.tabs ion-tab-button {
+  background-color: transparent;
+  position: relative;
+}
+
+.tabs ion-tab-button:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateX(-1px);
+  transform: translate(50%,-50%);
+  height: calc(100% - 16px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.tabs ion-tab-button:last-child:after {
+  display: none;
+}
+
+.tabs ion-label {
+  font-size: 11px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.tabs ion-icon {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 5px;
+}

@@ -1,5 +1,5 @@
 <template>
-  <ion-content  class="ion-padding ion-text-center">
+  <ion-content  class="ion-padding bg-rose-gradient ion-text-center">
   <ion-tabs >
     <ion-tab tab="/">
       <Home />
@@ -13,11 +13,11 @@
       <Rating />
     </ion-tab>
 
-    <ion-tab-bar slot="bottom">
+    <ion-tab-bar slot="bottom" class="md hydrated tabs">
       <ion-tab-button tab="/">
-        <ion-icon name="videocam"></ion-icon>
+        <ion-icon name="desktop"></ion-icon>
         <ion-label>Streams</ion-label>
-        <ion-badge>200</ion-badge>
+        <ion-badge class="badge">200</ion-badge>
       </ion-tab-button>
 
       <ion-tab-button tab="matches">

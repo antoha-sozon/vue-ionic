@@ -60,6 +60,8 @@
 </script>
 
 <style>
+@import "~@ionic/core/css/ionic.bundle.css";
 @import "assets/css/resetr.css";
 @import "assets/css/prismic-edit-button.css";
+@import "assets/css/style.css";
 </style>

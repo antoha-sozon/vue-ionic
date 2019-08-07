@@ -9,17 +9,17 @@
         <ion-list>
           <ion-item >
             <router-link tag="button" to="/" exact>
-              <span @click="closeModal">Home</span>
+              <span @click="closeModal">Dota 2</span>
             </router-link>
           </ion-item>
           <ion-item>
             <router-link tag="button" to="/matches" exact>
-              <span @click="closeModal">Matches</span>
+              <span @click="closeModal">CS: GO</span>
             </router-link>
           </ion-item>
           <ion-item>
-            <router-link tag="button" to="/rating" exact>
-              <span @click="closeModal">Rating</span>
+            <router-link tag="button" to="#" exact>
+              <span @click="closeModal">Coming soon</span>
             </router-link>
           </ion-item>
         </ion-list>
