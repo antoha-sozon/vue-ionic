@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.examle.gamestreamtv",
   "appName": "GameStreamTV",
   "bundledWebRuntime": false,
   "npmClient": "npm",
