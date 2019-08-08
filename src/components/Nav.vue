@@ -29,12 +29,12 @@
           </ion-item>
           <ion-item class="menu-toolbar-item">
             <router-link tag="button" to="/streams">
-              <span @click="closeModal"><img src="../assets/img/dota_logo.svg" class="menu-icons" alt=""> Dota 2</span>
+              <span @click="closeModal" name="dota2"><img src="../assets/img/dota_logo.svg" class="menu-icons" alt=""> Dota 2</span>
             </router-link>
           </ion-item>
           <ion-item class="menu-toolbar-item">
             <router-link tag="button" to="/streams">
-              <span @click="closeModal">CS: GO</span>
+              <span @click="closeModal" name="csgo"><img src="../assets/img/csgo_logo.svg" class="menu-icons" alt=""> CS: GO</span>
             </router-link>
           </ion-item>
         </ion-list>
@@ -48,9 +48,10 @@
   export default {
     name: 'Nav',
     methods: {
-      closeModal: function () {
+      closeModal: function (e) {
           document.querySelector('ion-menu').close();
-      }
+          this.$root.gameTag = e.currentTarget.getAttribute('name');
+      },
     }
   }
 </script>

@@ -26,5 +26,10 @@ Vue.use(VueProgressBar, options)
 
 new Vue({
   router,
+  data() {
+    return {
+      gameTag: 'dota2',
+    }
+  },
   render: h => h(App)
 }).$mount('#app');

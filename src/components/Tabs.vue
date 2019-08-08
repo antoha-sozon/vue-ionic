@@ -13,7 +13,7 @@
     </ion-tab>
 
     <ion-tab-bar slot="bottom" class="md hydrated tabs">
-      <ion-tab-button tab="/streams">
+      <ion-tab-button tab="streams">
         <ion-icon name="desktop"></ion-icon>
         <ion-label>Streams</ion-label>
         <ion-badge class="badge">200</ion-badge>

@@ -1,5 +1,5 @@
 <template>
-  <ion-content id="content" class="ion-page ion-padding content-bg content-offset ion-text-center">
+  <ion-content id="content" class="ion-page content-bg content-offset ion-text-center">
     <div class="match">
       <div class="match_teams">
         <img src="../assets/img/vue-logo.png" alt="">
