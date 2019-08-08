@@ -1,22 +1,63 @@
 <template>
-  <div class="ion-page">
-    <ion-content class="ion-text-center">
-      <div class="match">
-        <div class="match_head">
-          <img src="../assets/img/head_logo.png" alt="">
-        </div>
-        <div class="match_teams">
-          <img src="../assets/img/team-logo1.png" alt="">
-          <span>AT</span>
-          <img src="../assets/img/team-logo2.png" alt="">
-        </div>
-        <div class="match_info">
-          <p>Best of 3</p>
-          <p>National cup - quarterfinal</p>
-        </div>
+  <ion-content id="content" class="ion-page ion-padding content-bg content-offset ion-text-center">
+    <div class="match">
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
       </div>
-    </ion-content>
-  </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+      <div class="match_teams">
+        <img src="../assets/img/vue-logo.png" alt="">
+        <span>VS</span>
+        <img src="../assets/img/vue-logo.png" alt="">
+      </div>
+    </div>
+  </ion-content>
 </template>
 
 <script>

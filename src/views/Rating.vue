@@ -1,14 +1,8 @@
 <template>
-  <div class="ion-page">
-    <ion-content class="ion-padding ion-text-center">
-      <h1>Rating</h1>
-      <img alt="Vue logo" src="../assets/img/vue-logo.png">
-      <img alt="Vue logo" src="../assets/img/vue-logo.png">
-      <img alt="Vue logo" src="../assets/img/vue-logo.png">
-      <img alt="Vue logo" src="../assets/img/vue-logo.png">
-      <img alt="Vue logo" src="../assets/img/vue-logo.png">
-    </ion-content>
-  </div>
+  <ion-content id="content" class="ion-page ion-padding content-bg content-offset ion-text-center">
+    <h1>Rating</h1>
+    <img alt="Vue logo" src="../assets/img/vue-logo.png">
+  </ion-content>
 </template>
 
 <script>

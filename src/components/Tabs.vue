@@ -1,8 +1,7 @@
 <template>
-  <ion-content  class="ion-padding bg-rose-gradient ion-text-center">
-  <ion-tabs >
-    <ion-tab tab="/">
-      <Home />
+  <ion-tabs>
+    <ion-tab tab="streams">
+      <Streams />
     </ion-tab>
 
     <ion-tab tab="matches">
@@ -14,7 +13,7 @@
     </ion-tab>
 
     <ion-tab-bar slot="bottom" class="md hydrated tabs">
-      <ion-tab-button tab="/">
+      <ion-tab-button tab="/streams">
         <ion-icon name="desktop"></ion-icon>
         <ion-label>Streams</ion-label>
         <ion-badge class="badge">200</ion-badge>
@@ -31,15 +30,14 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-  </ion-content>
 </template>
 
 <script>
-  import Home from '../views/Home.vue';
-  import Rating from '../views/Rating.vue';
+  import Streams from '../views/Streams.vue';
   import Matches from '../views/Matches.vue';
+  import Rating from '../views/Rating.vue';
   export default {
     name: "Tabs",
-    components: {Home, Rating, Matches},
+    components: {Streams, Matches, Rating},
   };
 </script>

@@ -9,9 +9,9 @@ Vue.use(Ionic);
 Vue.config.productionTip = false;
 
 const options = {
-  color: '#fa000b',
-  failedColor: '#770b02',
-  thickness: '5px',
+  color: '#437cb2',
+  failedColor: '#2b3b5a',
+  thickness: '6px',
   transition: {
     speed: '0.2s',
     opacity: '0.6s',

@@ -1,44 +1,28 @@
 <template>
   <div id="app">
       <ion-app>
-        <ion-header>
-          <ion-toolbar>
-            <ion-row align-items-center>
-              <ion-col>
-                <ion-buttons class="ion-float-start">
-                  <ion-button>
-                    <ion-menu-button></ion-menu-button>
-                  </ion-button>
-                </ion-buttons>
-              </ion-col>
-              <ion-col text-center>
-                <div>
-                  <ion-title>Header</ion-title>
-                </div>
-              </ion-col>
-              <ion-col>
-                <ion-buttons class="ion-float-end">
-                  <ion-button>
-                    <ion-icon slot="icon-only" name="star"></ion-icon>
-                  </ion-button>
-                </ion-buttons>
-              </ion-col>
-            </ion-row>
-          </ion-toolbar>
-        </ion-header>
-        <Tabs/>
         <Nav/>
+        <Headbar/>
+          <Home v-if="homePage"/>
+          <Tabs v-else/>
       </ion-app>
       <vue-progress-bar></vue-progress-bar>
   </div>
 </template>
 
 <script>
+  import Headbar from './components/Header';
+  import Home from './views/Home';
   import Nav from './components/Nav';
   import Tabs from './components/Tabs';
   export default {
     name: 'App',
-    components: {Nav, Tabs},
+    components: {Home, Headbar, Nav, Tabs},
+    computed: {
+      homePage() {
+        return this.$route.path === '/home' || this.$route.path === '/';
+      }
+    },
     mounted () {
       this.$Progress.finish()
     },

@@ -1,44 +1,55 @@
 <template>
-    <ion-menu side="start" menuId="first">
+  <div>
+    <ion-menu class="main_menu" side="start" content-id="content">
       <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Start Menu</ion-title>
+        <ion-toolbar class="menu-toolbar">
+          <ion-row align-items-center>
+            <ion-col>
+              <ion-buttons class="ion-float-start">
+                <ion-button @click="closeModal">
+                  <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </ion-col>
+            <ion-col text-center>
+              <div>
+                <ion-title>game video app</ion-title>
+              </div>
+            </ion-col>
+          </ion-row>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+
+      <ion-content class="content-bg">
         <ion-list>
-          <ion-item >
-            <router-link tag="button" to="/" exact>
-              <span @click="closeModal">Dota 2</span>
+          <ion-item class="menu-toolbar-item">
+            <router-link tag="button" to="/">
+              <span @click="closeModal"><ion-icon name="home" class="menu-icons"></ion-icon> Home</span>
             </router-link>
           </ion-item>
-          <ion-item>
-            <router-link tag="button" to="/matches" exact>
+          <ion-item class="menu-toolbar-item">
+            <router-link tag="button" to="/streams">
+              <span @click="closeModal"><img src="../assets/img/dota_logo.svg" class="menu-icons" alt=""> Dota 2</span>
+            </router-link>
+          </ion-item>
+          <ion-item class="menu-toolbar-item">
+            <router-link tag="button" to="/streams">
               <span @click="closeModal">CS: GO</span>
-            </router-link>
-          </ion-item>
-          <ion-item>
-            <router-link tag="button" to="#" exact>
-              <span @click="closeModal">Coming soon</span>
             </router-link>
           </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
+    <ion-menu-controller></ion-menu-controller>
+  </div>
 </template>
-<style>
-  .my-custom-menu {
-    --width: 500px;
-  }
-</style>
 
-<script lang="ts">
+<script>
   export default {
     name: 'Nav',
     methods: {
       closeModal: function () {
           document.querySelector('ion-menu').close();
-
       }
     }
   }
