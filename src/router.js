@@ -3,6 +3,7 @@ import Home from './views/Home.vue'
 import Streams from './views/Streams.vue';
 import Matches from './views/Matches.vue';
 import Rating from './views/Rating.vue';
+import Settings from './views/Settings.vue'
 import NotFound from './views/NotFound.vue';
 import { IonicVueRouter } from '@ionic/vue';
 
@@ -31,6 +32,11 @@ export default new IonicVueRouter({
       path: '/rating',
       name: 'rating',
       component: Rating,
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings,
     },
     {
       path: '/not-found',

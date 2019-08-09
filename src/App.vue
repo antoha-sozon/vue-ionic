@@ -3,7 +3,8 @@
       <ion-app>
         <Nav/>
         <Headbar/>
-          <Home v-if="homePage"/>
+          <Home v-if="this.$route.path === '/' || this.$route.path === '/home'"/>
+          <Settings v-else-if="this.$route.path === '/settings'"/>
           <Tabs v-else/>
       </ion-app>
       <vue-progress-bar></vue-progress-bar>
@@ -13,16 +14,13 @@
 <script>
   import Headbar from './components/Header';
   import Home from './views/Home';
+  import Settings from './views/Settings';
   import Nav from './components/Nav';
   import Tabs from './components/Tabs';
+
   export default {
     name: 'App',
-    components: {Home, Headbar, Nav, Tabs},
-    computed: {
-      homePage() {
-        return this.$route.path === '/home' || this.$route.path === '/';
-      }
-    },
+    components: {Home, Settings, Headbar, Nav, Tabs},
     mounted () {
       this.$Progress.finish()
     },

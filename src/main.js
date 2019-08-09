@@ -1,14 +1,13 @@
 import Vue from 'vue';
+import Vuex from 'vuex';
 import VueProgressBar from 'vue-progressbar'
 import App from './App.vue';
 import router from './router';
-
 import Ionic from '@ionic/vue';
 
+Vue.use(Vuex);
 Vue.use(Ionic);
-Vue.config.productionTip = false;
-
-const options = {
+Vue.use(VueProgressBar, {
   color: '#437cb2',
   failedColor: '#2b3b5a',
   thickness: '6px',
@@ -20,15 +19,15 @@ const options = {
   autoRevert: true,
   location: 'top',
   inverse: false
-}
+});
 
-Vue.use(VueProgressBar, options)
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   data() {
     return {
-      gameTag: 'dota2',
+      gameTag: 'Dota 2',
     }
   },
   render: h => h(App)

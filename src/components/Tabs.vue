@@ -1,5 +1,5 @@
 <template>
-  <ion-tabs>
+  <ion-tabs @ionTabsWillChange="beforeTabChange">
     <ion-tab tab="streams">
       <Streams />
     </ion-tab>
@@ -39,5 +39,10 @@
   export default {
     name: "Tabs",
     components: {Streams, Matches, Rating},
+    methods: {
+      beforeTabChange() {
+
+      }
+    }
   };
 </script>
