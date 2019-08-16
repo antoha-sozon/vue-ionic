@@ -17,8 +17,6 @@
 
 <script>
   import axios from 'axios';
-  const key = '713tpdwvmexp84rh4i1zmgx2w5b21rz';
-  const limit = 20;
 
   export default {
     name: 'Streams',
@@ -27,12 +25,29 @@
         data: [],
       };
     },
-    mounted() {
-      axios
-        .get('https://api.twitch.tv/kraken/streams?game=' + this.$root.gameTag + '&limit=' + limit + '&offset=0&stream_type=live&client_id='+ key)
-        .then(response => (
-          this.data = response.data.streams
-        ));
+    mounted () {
+      this.getStreamInfo();
+    },
+    methods: {
+      getStreamInfo() {
+        axios.get('https://api.twitch.tv/kraken/streams/?game=Dota 2&limit=100&client_id=713tpdwvmexp84rh4i1zmgx2w5b21rz')
+          .then((response) => {
+            if(response) {
+              let streams = response.data.streams;
+              for (let i = 0; i < streams.length; i++) {
+                let obj = streams[i];
+                if (obj.viewers > 100) {
+                  this.data.push(streams[i]);
+                }
+              }
+            }
+            console.log(this.data);
+          }).catch((error) => {
+          if(response) {
+            console.log(error);
+          }
+        });
+      },
     },
   }
 </script>

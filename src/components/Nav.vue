@@ -55,7 +55,7 @@
     methods: {
       closeModal: function (e) {
           document.querySelector('ion-menu').close();
-          this.$root.gameTag = e.currentTarget.getAttribute('name');
+          this.$parent.gameTag = e.currentTarget.getAttribute('name');
       },
     }
   }

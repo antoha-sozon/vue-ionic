@@ -1,169 +1,15 @@
 <template>
   <ion-content id="content" class="ion-page content-bg content-offset ion-text-center">
     <div class="rating">
-      <div class="rating_block">
+      <div v-for="rate in rating" class="rating_block">
         <div>
           🏆
         </div>
         <div>
-          Team Liquid
+          {{ rate.team_name }}
         </div>
         <div>
-          $17 816 915
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Evil Geniuses
-        </div>
-        <div>
-          $17 731 126
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          OG
-        </div>
-        <div>
-          $17 397 821
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Team Liquid
-        </div>
-        <div>
-          $17 816 915
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Evil Geniuses
-        </div>
-        <div>
-          $17 731 126
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          OG
-        </div>
-        <div>
-          $17 397 821
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Team Liquid
-        </div>
-        <div>
-          $17 816 915
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Evil Geniuses
-        </div>
-        <div>
-          $17 731 126
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          OG
-        </div>
-        <div>
-          $17 397 821
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Team Liquid
-        </div>
-        <div>
-          $17 816 915
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Evil Geniuses
-        </div>
-        <div>
-          $17 731 126
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          OG
-        </div>
-        <div>
-          $17 397 821
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Team Liquid
-        </div>
-        <div>
-          $17 816 915
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          Evil Geniuses
-        </div>
-        <div>
-          $17 731 126
-        </div>
-      </div>
-      <div class="rating_block">
-        <div>
-          🏆
-        </div>
-        <div>
-          OG
-        </div>
-        <div>
-          $17 397 821
+          {{ rate.team_prize }}
         </div>
       </div>
     </div>
@@ -171,7 +17,27 @@
 </template>
 
 <script>
+  import axios from 'axios';
   export default {
     name: "rating",
+    data() {
+      return {
+        rating: [],
+      }
+    },
+    mounted () {
+      this.getRating()
+    },
+    methods: {
+      getRating() {
+        axios.get('http://api.gamestreamtv.ru/json/dota2/rating/?token=8J8JAQ6t4CMqaTiu2FWZxOnJTnWbO9gCCUeq')
+          .then((response) => {
+            this.rating = response.data[0];
+            console.log(this.rating);
+          }).catch((error) => {
+          console.log(error);
+        });
+      },
+    }
   };
 </script>

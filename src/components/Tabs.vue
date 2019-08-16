@@ -16,7 +16,6 @@
       <ion-tab-button tab="streams">
         <ion-icon name="desktop"></ion-icon>
         <ion-label>Streams</ion-label>
-        <ion-badge class="badge">200</ion-badge>
       </ion-tab-button>
 
       <ion-tab-button tab="matches">
@@ -41,7 +40,6 @@
     components: {Streams, Matches, Rating},
     methods: {
       beforeTabChange() {
-
       }
     }
   };

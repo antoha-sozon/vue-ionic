@@ -26,17 +26,81 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
-  margin: 5px 0;
 }
 
 .match_teams:nth-child(2n + 1) {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: #162034;
 }
 
+.match_team__info {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 33.333333%;
+}
 
+.match_team__info span {
+  font-size: 12px;
+  color: #ffffff;
+}
 
-.match_teams img {
-  width: 80px;
+.match_team__info img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.match-vs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.match-vs_tournament {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.match-vs_vs {
+  font-size: 24px;
+  font-weight: 700;
+  color: #a3ff12;
+  margin-bottom: 15px;
+}
+
+.match-vs_vs small {
+  font-size: 14px;
+  font-weight: 100;
+  color: #ffffff;
+}
+
+.match-vs_time {
+  font-size: 24px;
+  font-weight: 700;
+  color: #a3ff12;
+  margin-bottom: 15px;
+}
+
+.match-vs_live {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.match-vs_date {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .match_info {
@@ -52,12 +116,17 @@ img {
 }
 
 .tabs {
-  background-color: #3c3f41;
+  background-color: #141720;
+  box-shadow: 0px 0px 1px 0px #a2fd1b;
 }
 
 .tabs ion-tab-button {
   background-color: transparent;
   position: relative;
+}
+
+.tabs ion-tab-button[aria-selected="true"] {
+  color: #a3ff12;
 }
 
 .tabs ion-tab-button:after {
@@ -91,8 +160,9 @@ img {
 }
 
 .toolbar-bg{
-  --background: #3c3f41;
+  --background: #141720;
   --color: #fff;
+  box-shadow: 0px 0px 3px 0px #a2fd1b;
 }
 
 .header-button {
@@ -101,7 +171,7 @@ img {
 }
 
 .content-bg {
-  --background: #2b2b2b;
+  --background: #151720;
 }
 
 .main_menu {
@@ -109,7 +179,7 @@ img {
 }
 
 .menu-toolbar {
-  --background: #292b2c;
+  --background: #141720;
   --color: #fff;
   text-align: center;
 }
@@ -187,28 +257,6 @@ ion-item{
   margin-bottom: 10px;
 }
 
-.match-vs {
-  display: flex;
-  flex-direction: column;
-  color: #f2f2f2;
-}
-
-.match-vs small {
-  font-weight: 100;
-  font-size: 8px;
-  text-transform: uppercase;
-}
-
-
-.match-vs span {
-  font-size: 20px;
-  font-family: cursive;
-  font-weight: bold;
-  color: #fff;
-  position: relative;
-  padding: 5px;
-}
-
 .rating {
   padding-top: 5px;
 }
@@ -219,7 +267,7 @@ ion-item{
   justify-content: space-between;
   color: #f2f2f2;
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #162034;
   margin-bottom: 5px;
   font-weight: 300;
 }
@@ -276,7 +324,7 @@ ion-item{
   justify-content: space-between;
   color: #f2f2f2;
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #162034;
   margin-bottom: 5px;
   font-weight: 300;
 }
@@ -313,6 +361,8 @@ ion-item{
 
 .streams-block div:last-child p {
   height: 33px;
+  font-size: 9px;
+  line-height: 11px;
   overflow: hidden;
   color: #8c8c8c;
   text-align: left;
@@ -371,4 +421,52 @@ ion-content {
   font-size: 20px;
   font-weight: 100;
   margin-bottom: 5px;
+}
+
+.vue-tablist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+
+.vue-tab {
+  width: 30%;
+  background-color: #a3ff12;
+  padding: 10px 5px;
+  color: #151720;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.vue-tab[aria-selected="true"] {
+  background-color: #151720;
+  color: #a3ff12;
+}
+
+.vue-tabpanel {
+  margin-top: -1px;
+}
+
+ion-item {
+  --background: transparent;
+  --handle-background: #fff;
+  --border-color: #a3ff12;
+  --color: #ffffff;
+}
+
+ion-label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ion-toggle {
+  height: 24px;
+  zoom:0.8;
+  --background: #162034;
+  --background-checked: #a3ff12;
+  --handle-background: #a3ff12;
+  --handle-background-checked: #162034;
 }
