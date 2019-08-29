@@ -50,6 +50,17 @@ img {
   margin-bottom: 10px;
 }
 
+.match-no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #a3ff12;
+}
+
 .match-vs {
   display: flex;
   flex-direction: column;

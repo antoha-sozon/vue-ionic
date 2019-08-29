@@ -1,22 +1,53 @@
 <template>
-  <ion-content id="content" class="ion-page ion-padding content-bg content-offset ion-text-center">
-    <ion-list>
-      <ion-item>
-        <ion-label>Pepperoni</ion-label>
-        <ion-toggle value="pepperoni"></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Sausage</ion-label>
-        <ion-toggle value="sausage" checked></ion-toggle>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Mushrooms</ion-label>
-        <ion-toggle value="mushrooms" disabled></ion-toggle>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+  <div class="settings">
+    <ul>
+      <li><span>Notification</span>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+          <label class="onoffswitch-label" for="myonoffswitch1">
+            <div class="onoffswitch-inner">
+              <div class="onoffswitch-active">
+                <div class="onoffswitch-switch">ON</div>
+              </div>
+              <div class="onoffswitch-inactive">
+                <div class="onoffswitch-switch">OFF</div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+      <li><span>Notification</span>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2">
+          <label class="onoffswitch-label" for="myonoffswitch2">
+            <div class="onoffswitch-inner">
+              <div class="onoffswitch-active">
+                <div class="onoffswitch-switch">ON</div>
+              </div>
+              <div class="onoffswitch-inactive">
+                <div class="onoffswitch-switch">OFF</div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+      <li><span>Notification</span>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch3" checked>
+          <label class="onoffswitch-label" for="myonoffswitch3">
+            <div class="onoffswitch-inner">
+              <div class="onoffswitch-active">
+                <div class="onoffswitch-switch">ON</div>
+              </div>
+              <div class="onoffswitch-inactive">
+                <div class="onoffswitch-switch">OFF</div>
+              </div>
+            </div>
+          </label>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>

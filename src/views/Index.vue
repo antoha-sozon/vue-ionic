@@ -41,10 +41,9 @@
   import { FulfillingBouncingCircleSpinner } from 'epic-spinners';
 
   export default {
-    name : 'Streams',
+    name : 'Home',
     data() {
       return {
-        game: this.$route.params.game,
         isLoading: true,
         data: [],
       };
@@ -57,7 +56,7 @@
     },
     methods: {
       getStreamInfo() {
-        axios.get('http://api.gamestreamtv.ru/json/' + this.game + '/streams/?token=8J8JAQ6t4CMqaTiu2FWZxOnJTnWbO9gCCUeq')
+        axios.get('http://api.gamestreamtv.ru/json/dota2/streams/?token=8J8JAQ6t4CMqaTiu2FWZxOnJTnWbO9gCCUeq')
           .then((response) => {
             if(response) {
               this.data = response.data;
