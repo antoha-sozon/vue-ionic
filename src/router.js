@@ -36,8 +36,8 @@ export default new Router({
       component: Stream,
     },
     {
-      path: '/tournatches',
-      name: 'tournatches',
+      path: '/tourmatches/:game',
+      name: 'tourmatches',
       component: TourMatches,
     },
     {
