@@ -13,6 +13,11 @@
 
   export default {
     name: 'App',
+    data() {
+      return {
+        gameName: 'dota2',
+      };
+    },
     components: {HeaderMenu, FooterMenu},
   }
 </script>

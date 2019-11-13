@@ -12,7 +12,7 @@
          :style="'background-image: url(' + stream.preview.medium + ');'">
       <div class="stream_block__info">
         <div class="stream_block__title">
-          <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/7714a7c7-25b9-4a2b-9d45-99cd5554004c-profile_image-300x300.png"
+          <img :src="stream.channel.logo"
                alt=""
           >
           <div class="stream_block__text">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="stream_block__link">
-        <router-link :to="'/streams/' + stream.channel.name">
+        <router-link :to="'/stream/' + stream.channel.name">
           View broadcasts
         </router-link>
       </div>
@@ -52,7 +52,7 @@
       this.getStreamInfo();
     },
     components: {
-      FulfillingBouncingCircleSpinner
+      FulfillingBouncingCircleSpinner,
     },
     methods: {
       getStreamInfo() {
@@ -60,6 +60,7 @@
           .then((response) => {
             if(response) {
               this.data = response.data;
+              console.log(this.data);
               setTimeout(() => this.isLoading = false, 1000);
             }
           }).catch((error) => {

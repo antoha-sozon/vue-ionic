@@ -70,7 +70,7 @@ img {
   justify-content: space-between;
   padding-right: 1rem;
   background: #19171c;
-  z-index: 9999;
+  z-index: 8888;
 }
 .header .active svg {
   fill: #a3ff12;
@@ -508,5 +508,48 @@ img {
   justify-content: center;
   color: #f2f2f2;
   font-size: 3rem;
+  text-align: center;
+}
+.stream_page h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a3ff12;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.stream_page_player {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+  position: relative;
+}
+
+@media (orientation: landscape) {
+  .stream_page_player {
+    position: absolute;
+    padding: 0;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+}
+
+.stream_page_player iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.stream_page_info {
+  padding: 15px;
+  color: #f2f2f2;
+}
+
+.stream_page_info h3 {
   text-align: center;
 }

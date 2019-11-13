@@ -31,7 +31,7 @@ export default new Router({
       component: Streams,
     },
     {
-      path: '/streams/:name',
+      path: '/stream/:name',
       name: 'stream',
       component: Stream,
     },
